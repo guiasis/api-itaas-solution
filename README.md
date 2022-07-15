@@ -4,18 +4,32 @@ This is a API to convert CDN Logs to Agora Format
 
 ## Start
 
-Use npm or yarn
+Install :
+- NodeJs
+- NPM or Yarn
 
 ```bash
 npm install
 ```
 
-## Usage
+Start Project
+```bash
+npm run start
+```
+
+## Modules
+- TypeScript
+- Express
+- Axios
+- Joi
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
 Please make sure to update tests as appropriate.
+
+## Author
+[Guilherme Assis](https://github.com/guiasis)
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
