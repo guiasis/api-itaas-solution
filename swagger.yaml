@@ -1,0 +1,36 @@
+swagger: "2.0"
+info:
+  title: API iTaaS Solution
+  description: This is a API to convert CDN Logs to Agora Format
+  version: 1.0.0
+host: localhost:3000
+schemes:
+  - https
+paths:
+  /convert/logs/cdn-to-agora:
+    post:
+      summary: Convert CDN Logs to Agora Format.
+      parameters:
+        - in: body
+          name: user
+          schema:
+            $ref: '#/definitions/ConvertCDNLogsToAgoraFormatBody'
+      responses:
+        200:
+          description: OK
+        500:
+          description: Invalid Source Url
+        500:
+          description: Invalid Targe Url
+        500:
+          description: Failed to download source file
+definitions:
+  ConvertCDNLogsToAgoraFormatBody:
+    properties:
+      sourceUrl:
+        type: string
+      targetUrl:
+        type: string
+    required:  
+      - sourceUrl
+      - targetUrl

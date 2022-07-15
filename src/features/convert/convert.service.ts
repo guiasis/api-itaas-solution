@@ -14,9 +14,7 @@ class ConvertService {
 
         await this.saveFile(convertedFile, targetUrl)
 
-        return {
-            convertedResult: convertedFile
-        }
+        return "OK"
     }
 
     private validateSourceUrl(sourceUrl: string) {
