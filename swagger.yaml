@@ -19,11 +19,7 @@ paths:
         200:
           description: OK
         500:
-          description: Invalid Source Url
-        500:
-          description: Invalid Targe Url
-        500:
-          description: Failed to download source file
+          description: Invalid some parameter
 definitions:
   ConvertCDNLogsToAgoraFormatBody:
     properties:
