@@ -19,13 +19,13 @@ class ConvertService {
 
     private validateSourceUrl(sourceUrl: string) {
         if (!/[.][^\ .]+$/g.test(sourceUrl) || !/[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g.test(sourceUrl)) {
-            throw { message: "Invalid Source Url" }
+            throw new Error("Invalid Source Url")
         }
     }
 
     private validateTargetUrl(targetUrl: string) {
         if (!/[.][^\ .]+$/g.test(targetUrl)) {
-            throw { message: "Invalid Targe Url" }
+            throw new Error("Invalid Targe Url")
         }
     }
 
@@ -37,7 +37,7 @@ class ConvertService {
         })
 
         if (!result.data) {
-            throw { message: "Failed to download source file" }
+            throw new Error("Failed to download source file")
         }
 
         return result.data
