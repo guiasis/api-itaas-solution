@@ -21,6 +21,7 @@ npm run start
 - TypeScript
 - Express
 - Axios
+- Jest
 - Joi
 
 ## Contributing
